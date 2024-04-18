@@ -23,6 +23,7 @@ const HomeScreen = (props: Props) => {
   const onRefresh = () => {
     setRefreshing(true);
     setPage(1);
+    fetchData();
     setRefreshing(false);
   };
   useEffect(() => {
@@ -31,7 +32,7 @@ const HomeScreen = (props: Props) => {
 
   const fetchData = async () => {
     try {
-      const response = await apiInstance.get('/posts', {
+      const response = await apiInstance.get('/admin/posts', {
         params: {
           page,
         },
@@ -153,6 +154,7 @@ const HomeScreen = (props: Props) => {
             image={item.image}
             destination={item.travel_destination}
             privacy={item.privacy}
+            verify={item.verify}
             navigation={props.navigation}
           />
         ))}

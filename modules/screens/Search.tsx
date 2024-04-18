@@ -113,17 +113,14 @@ const SearchScreen = (props: Props) => {
           destination.map((item, index) => {
             return (
               <Destination
-                key={item.id}
-                id={item.id}
-                destination={item.destination}
+                key={index}
+                id={item._id}
                 city={item.city}
-                user_id={item.user_id}
-                avatar={item.avatar !== undefined ? item.avatar : ''}
-                time={item.created_at}
-                description={item.content}
-                like={item.likes_count}
-                tags={item.tags}
+                destination={item.travel_destination}
                 image={item.image}
+                created_at={item.created_at}
+                description={item.description}
+                verify={item.verify}
                 navigation={props.navigation}
               />
             );
@@ -165,7 +162,7 @@ const SearchScreen = (props: Props) => {
           posts.map((item, index) => {
             return (
               <Post
-                key={item._id}
+                key={index}
                 id={item._id}
                 name={item.full_name}
                 avatar={item.avatar !== undefined ? {uri: item.avatar} : ''}
@@ -178,6 +175,7 @@ const SearchScreen = (props: Props) => {
                 image={item.image}
                 destination={item.travel_destination}
                 privacy={item.privacy}
+                verify={item.verify}
                 navigation={props.navigation}
               />
             );
