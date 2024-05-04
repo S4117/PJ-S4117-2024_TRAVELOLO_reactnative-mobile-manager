@@ -1,3 +1,7 @@
+# Môn học/Nhóm: Lập trình di động nâng cao 
+## Nhóm 14 - SVTH: Đoàn Quốc Bảo -MSSV: 20110612
+# Đề tài: Xây dựng ứng dụng mạng xã hội du lịch
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
